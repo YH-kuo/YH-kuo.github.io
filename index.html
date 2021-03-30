@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yahan.Kuo's Page</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello/fontello-embedded.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello/animation.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- vue -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+	<header>
+		<div class="bg_circle circle1"></div>
+		<div class="bg_circle circle2"></div>
+		<nav>
+			<div class="container">
+				<div class="ham">
+					<a href="#popup_menu">
+						<span></span><span></span><span></span>
+					</a>
+				</div>
+			</div>
+			<div class="popup_menu" id="popup_menu">
+				<div class="container">
+					<div class="popup_close">
+						<a href="#!">
+							<span></span><span></span>
+						</a>
+					</div>
+				</div>
+				<div class="bg_circle circle1"></div>
+				<div class="bg_circle circle2"></div>
+				<div class="menu_logo"><img src="img/myLOGO.svg" alt="函 - HAN HAN"></div>
+				<div class="menu_list">
+					<ul>
+						<li><a class="resume" href="#popup_resume">背景/學經歷</a></li>
+						<li><a class="portfolio" href="page_portfolio2.html">作品集</a></li>
+						<li><a class="contact" href="#contact_area">連絡我/給點建議</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="header_box">
+			<div class="container">
+				<div class="top_logo"><img src="img/myLOGO.svg" alt="函 - HAN HAN"></div>
+				<div class="hello_word">Hello!<br>我是亞函,你呢?</div>
+				<div class="guest_name">
+					<p>我是<input v-model="message" type="text" placeholder=""></p>
+				</div>
+				<div class="go_down">
+					<svg viewBox="0 0 110 110">
+					  <!-- 中心點XY , 半徑 -->
+					  <circle cx="55" cy="55" r="50" class="dashed" />
+					  <foreignObject x="5" y="5"  class="dashed_center">
+					    <a href="#!">向下捲動</a>
+					  </foreignObject>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="link_area" id="link_area">
+			<div class="container">
+				<div class="ask_box col-sm-6">
+					<div class="ask_word">
+						<p><span>{{ message }}</span>很高興認識你!<br>你想了解些甚麼呢?</p>
+					</div>
+					<div class="ask_img"><img src="img/azarashi.png" alt=""></div>
+				</div>
+				<div class="btn_box col-sm-6">
+					<div class="resume"><a href="#popup_resume">背景/學經歷</a></div>
+					<div class="portfolio"><a href="page_portfolio2.html">作品集</a></div>
+					<div class="contact"><a href="#!">連絡我/給點建議</a></div>
+				</div>
+			</div>
+		<div class="bg_circle circle3"></div>
+		</section>
+		<section class="contact_area" id="contact_area">
+			<div class="container">
+				<h3>Message<span>連絡我/給點建議</span></h3>
+				<div class="contact_box">
+					<form action="" class="form wow fadeInUp" >
+						<label for="guestName">您的稱呼</label>
+						<input type="text" placeholder="怎麼稱呼您呢? ex:楊某某 / Tom / 楊先生" id="guestName">
+						<div class="row">
+							<div class="col-sm-6">
+								<label for="massgaeType">訊息類型</label>
+					            <select id="massgaeType">
+					              <option value="0" value="0" selected disabled>請選擇</option>
+					              <option value="面試邀約">面試邀約</option>
+					              <option value="設計委託">設計委託</option>
+					              <option value="意見回饋">意見回饋</option>
+					            </select>
+							</div>
+							<div class="col-sm-6">
+								<label for="guestMail">回覆信箱</label>
+								<input type="email" placeholder="如果需要回信請填寫您的信箱" id="guestMail">
+							</div>
+						</div>
+						<label for="massgaeText">您的訊息</label>
+						<textarea id="massgaeText" cols="30" rows="10"></textarea>
+						<div class="submit_btn">
+							<!-- 同時設定三處寬高 -->
+							<svg viewBox="0 0 310 90">
+						  		<rect class="dashed"/>
+						  		<!-- 起始點XY -->
+								<foreignObject x="5" y="5"  class="dashed_center">
+								  	<a id="submit" href="#!">送出訊息</a>
+								</foreignObject>
+							</svg>
+						</div>
+			          	<input type="reset" style="display:none;"/>
+					</form>
+				</div>
+			</div>
+		</section>
+		<div class="resume_area" id="popup_resume">
+			<div class="container">
+				<div class="resume_bg">
+					<div class="resume_close">
+						<a href="#!"><i class="demo-icon icon-cancel"></i></a>
+					</div>
+					<div class="myPic"></div>
+					<div class="myName">郭亞函</div>
+					<div class="mySchool resume_list myIcon icon-education">
+						<ul>
+							<li>
+								<span>私立實踐大學</span>
+								<span>畢業</span>
+								<span>媒體傳達設計學系</span>
+							</li>
+						</ul>
+					</div>
+					<div class="myJobs resume_list myIcon icon-experience">
+						<ul>
+							<li>
+								<span>資訊工業策進會</span>
+								<span>派遣</span>
+								<span>視覺設計</span>
+							</li>
+							<li>
+								<span>先得利資訊科技</span>
+								<span>全職</span>
+								<span>網頁設計</span>
+							</li>
+							<li>
+								<span>族語數位中心</span>
+								<span>外包</span>
+								<span>視覺設計</span>
+							</li>
+							<li>
+								<span>日本打工度假</span>
+								<span>打工</span>
+								<span>-</span>
+							</li>
+							<li>
+								<span>全球華人</span>
+								<span>全職</span>
+								<span>網頁設計</span>
+							</li>
+							<li>
+								<span>經展國際會展</span>
+								<span>全職</span>
+								<span>網頁前端設計師</span>
+							</li>
+						</ul>
+					</div>
+					<div class="mySkill resume_list myIcon icon-skill">
+						<ul>
+							<li>
+								<span>Illustrator</span>
+								<span class="skill_bar"><i style="width: 90%"></i></span>
+							</li>
+							<li>
+								<span>Photoshop</span>
+								<span class="skill_bar"><i style="width: 90%"></i></span>
+							</li>
+							<li>
+								<span>XD</span>
+								<span class="skill_bar"><i style="width: 50%"></i></span>
+							</li>
+							<li>
+								<span>HTML</span>
+								<span class="skill_bar"><i style="width: 80%"></i></span>
+							</li>
+							<li>
+								<span>Css</span>
+								<span class="skill_bar"><i style="width: 80%"></i></span>
+							</li>
+							<li>
+								<span>jquery</span>
+								<span class="skill_bar"><i style="width: 70%"></i></span>
+							</li>
+							<li>
+								<span>Vue</span>
+								<span class="skill_bar"><i style="width: 5%"></i></span>
+							</li>
+						</ul>
+						<p>根據需求設計網頁視覺layout,並協助優化專案流程。<br>將完成之視覺編寫HTML&Css,並依需求使用合適套件製成靜態網頁。<br>
+						目前正在進修前端相關課程(jq/js/vue...等)</p>
+					</div>
+					<div class="myHobby resume_list myIcon icon-hobbies">
+						<p>其他技能／興趣</p>
+						<ul>
+							<li>JLPT N2</li>
+							<li>西點烘焙</li>
+						</ul>
+					</div>
+					<div class="resume_btn">
+						<div class="go_btn">
+							<svg viewBox="0 0 280 90">
+						  		<rect class="dashed"/>
+						  		<!-- 起始點XY -->
+								<foreignObject x="5" y="5"  class="dashed_center">
+								  	<a class="icon-arrow_line" href="page_portfolio2.html">前往作品集</a>
+								</foreignObject>
+							</svg>
+						</div>
+						<div class="go_btn">
+							<svg viewBox="0 0 280 90">
+						  		<rect class="dashed"/>
+						  		<!-- 起始點XY -->
+								<foreignObject x="5" y="5"  class="dashed_center">
+								  	<a class="icon-cancel" href="#!">關閉履歷</a>
+								</foreignObject>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- 返回上方按鈕 -->
+	<div class="go-top"><a href="#!">Top</a></div>
+	<!-- 返回上方按鈕 END -->
+
+	</main>
+
+	</div>
+		<footer>
+			<div class="container">
+				<div class="used_material">
+					<p>素材使用</p>
+					<div class="material_link">
+						<ul>
+							<li><a href="https://www.irasutoya.com/" target="_blank">いらすとや</a></li>
+							<li><a href="https://freedesignresources.net/" target="_blank">Free Design Resources</a></li>
+							<li><a href="https://www.ac-illust.com/" target="_blank">イラストAC</a></li>
+						</ul>
+					</div>
+					<hr>
+					<div class="coptright">Copyright@2020</div>
+				</div>
+			</div>
+		</footer>
+	<!-- bootstrap -->
+	<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<!-- 表單回覆 -->
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="js/common.js"></script>
+<script>
+	var app = new Vue({
+	  el: '#app',
+	  data: {
+	    message: ''
+	  }
+	})
+</script>
+</body>
+</html>
