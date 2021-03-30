@@ -1,7 +1,7 @@
 /*all -----------------------------*/
 body,html{
   font-family: "微軟正黑體", 'Helvetica', 'roboto', arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   overflow-x: hidden;
 }
 *{
@@ -252,6 +252,9 @@ section{
 	color: #1A959E;
 	font-size: 36px;
 }
+.ask_box .ask_img img{
+	max-width: 100%;
+}
 .btn_box>div{
 	border-radius: 10px;
 	margin-bottom: 16px;
@@ -290,6 +293,7 @@ section{
 	border-radius: 15px;
 	background-image: url(../img/material_01.png);
 	padding: 26px;
+	margin-bottom: 50px;
 }
 .contact_box .col-sm-6{
     box-sizing: border-box;
@@ -776,16 +780,16 @@ section{
 	right: 5%;
 	bottom: 10%;
 	display: block;
-	width: 100px;
-	height: 100px;
+	width: 70px;
+	height: 70px;
 	background-image: url(../img/gotopbtn_bg.png);
 	background-size: contain;
 	z-index: 20;
 	text-align: center;
 }
 .go-top a{
-	line-height: 100px;
-	font-size: 22px;
+	line-height: 70px;
+	font-size: 16px;
 	font-weight: bold;
 }
 /*$ footer -----------------------------*/
@@ -800,6 +804,7 @@ footer{
 }
 .material_link{
 	display: block;
+    font-size: 14px;
 }
 .material_link ul{
 	display: flex;
@@ -822,3 +827,42 @@ footer{
 
 
 /*測試*/
+@media screen and (max-width: 992px){
+	.top_logo img{width: 160px;}
+	.top_logo, .hello_word, .guest_name, .go_down{font-size: 20px;}
+	.guest_name p{padding: 10px 50px;}
+	.btn_box a{font-size: 20px; padding: 5vh 0;}
+	.ask_box .ask_word{font-size: 20px;}
+	.popup_menu .menu_logo img {width: 80px;}
+	.menu_list li a{font-size: 22px;}
+	.ham a{transform: scale(.6);}
+	.popup_close a{transform: scale(.6);}
+	.submit_btn{transform: scale(.8)}
+	.go_down svg{transform: scale(.8)}
+	.contact_area h3{font-size: 30px;}
+	.contact_area h3 span{font-size: 22px;}
+
+	.resume_bg{margin-top: 200px;padding: 20px;font-size: 16px;}
+	.myPic{width: 200px;height: 200px;}
+	.myName{letter-spacing: 8px;font-size: 30px;}
+	.myJobs li span:nth-child(1) {width: 180px;}
+	.resume_btn{transform: scale(.8)}
+	.resume_close{top: 0;}
+	.myIcon:before{font-size: 26px;}
+	.resume_close a i{width: 30px;height: 30px;font-size: 20px;}
+	.skill_bar{width: 70%;height: 11px;}
+}
+@media screen and (max-width: 768px){
+	.myIcon:before{margin-right: 10px;}
+	.mySchool li:before, .myJobs li:before{width: 10px;height: 10px;margin-top: -10px;}
+	.myJobs li span:nth-child(1){width: 150px;}
+	.myJobs li span:nth-child(2){width: 50px;}
+	.skill_bar{width: 60%;}
+	.mySkill p{margin-left: 35px;}
+}
+
+@media screen and (max-width: 576px){
+	.mySchool li, .myJobs li{margin-left: 20px;}
+	.mySchool li:before, .myJobs li:before{margin-left: -20px;}
+	.resume_btn .go_btn:nth-child(2){display: none;}
+}
