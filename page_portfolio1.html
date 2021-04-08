@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Yahan.Kuo's Portfolio</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello/fontello-embedded.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello/animation.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/lightbox/screen.css">
+	<link rel="stylesheet" href="css/lightbox/lightbox.css">
+	<!-- vue -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+	<link rel="stylesheet" href="css/venobox/venobox.css" type="text/css" media="screen" />
+
+</head>
+<body>
+	<header class="page_header">
+		<div class="bg_circle circle1"></div>
+		<div class="bg_circle circle2"></div>
+		<nav>
+			<div class="container">
+				<div class="home">
+					<a href="index.html" class="go_home"><i class="icon-home"></i></a>
+				</div>
+			</div>
+		</nav>
+		<div class="header_box">
+			<div class="container">
+				<div class="top_logo"><img src="img/myLOGO.svg" alt="函 - HAN HAN"></div>
+				<div class="hello_word">Hello!</div>
+				<div class="top_info">
+					<p>其著作財產權歸公司(雇用人)享有<br>僅以製作參與者身分展示部分作品</p>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<main>
+		<section class="card_area">
+			<div class="container" id="app">
+				
+				<div class="button-group filters-button-group">
+					<button class="button is-checked" data-filter="*">全部作品</button>
+					<button class="button" data-filter=".web">網頁</button>
+					<button class="button" data-filter=".graphic">平面</button>
+					<button class="button" data-filter=".other">其他相關</button>
+					<button class="button" data-filter=".draw">興趣繪畫</button>
+				</div>
+
+				<div id="grid" class="grid">
+					<div v-for="item in list" class="element-item" :class=" item.type " :data-category=" item.type ">
+						<a href="#!">
+							<img :src="'images/card/' + item.path " alt="" />
+							{{ item.title }}
+						</a>
+					</div>
+				</div>
+
+	        </div>
+		</section>
+	<!-- 返回上方按鈕 -->
+	<div class="go-top"><a href="#!">Top</a></div>
+	<!-- 返回上方按鈕 END -->
+	</main>
+	<footer>
+		<div class="container">
+			<div class="used_material">
+				<p>素材使用</p>
+				<div class="material_link">
+					<ul>
+						<li><a href="https://www.irasutoya.com/" target="_blank">いらすとや</a></li>
+						<li><a href="https://freedesignresources.net/" target="_blank">Free Design Resources</a></li>
+						<li><a href="https://www.ac-illust.com/" target="_blank">イラストAC</a></li>
+					</ul>
+				</div>
+				<hr>
+				<div class="coptright">Copyright@2020</div>
+			</div>
+		</div>
+	</footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/isotope/isotope.pkgd.js"></script>
+<script type="text/javascript" src="js/lightbox/lightbox.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/venobox/venobox.min.js"></script>
+<script src="js/data.js"></script>
+<script>
+	$('.venobox').venobox({
+		framewidth : '70%',                            // default: ''
+		border     : '10px',                             // default: '0'
+		titleattr  : 'data-title',                       // default: 'title'
+		numeratio  : true,                               // default: false
+		infinigall : true,                               // default: false
+		share      : ['facebook', 'twitter', 'download'] // default: []
+	});
+</script>
+</body>
+</html>
