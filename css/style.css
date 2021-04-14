@@ -851,6 +851,15 @@ footer{
 	.myIcon:before{font-size: 26px;}
 	.resume_close a i{width: 30px;height: 30px;font-size: 20px;}
 	.skill_bar{width: 70%;height: 11px;}
+
+	.card_info{
+		opacity: 1;
+		position: relative;
+		width: 100%;
+		margin: 0;
+		transform: translateY(0);
+		box-shadow:none;
+	}
 }
 @media screen and (max-width: 768px){
 	.myIcon:before{margin-right: 10px;}
