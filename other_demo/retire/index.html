@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="復華投信掌握投資真理，助你順利闖關，退休金達標!" />
+    <meta name="author" content="" />
+
+    <!-- Facebook/Line Meta Tags -->
+    <meta property="fb:app_id" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="復華投信 退休理財。金攻略" />
+    <meta
+      property="og:description"
+      content="復華投信掌握投資真理，助你順利闖關，退休金達標!" />
+    <meta property="og:image" content="image/share_img.jpg?v=version" />
+    <title>復華投信 退休理財。金攻略</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NKX9LLX');
+    </script>
+    <!-- End Google Tag Manager -->
+    <link href="css/general.css?v=version" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NKX9LLX"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header login="false">
+      <div class="navbar navbar-expand-md navbar-light shadow-sm p-0">
+        <a
+          href="#"
+          class="navbar-brand d-flex align-items-center justify-content-center"
+        >
+          <img class="w-md-100" src="image/logo/logo.png?v=version" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#headerBar"
+          aria-controls="headerBar"
+          aria-expanded="false"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="headerBar">
+          <button
+            type="button"
+            id="CloseMenuButton"
+            class="d-inline-block d-md-none"
+            onclick="$('.navbar-toggler').click()"
+          >
+            <img src="image/closeButton-2.png" />
+          </button>
+          <ul class="navbar-nav me-md-auto mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active HoverEffect" href="index.html#Tips" id="navbarDropdown-1">
+                退休理財真理
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link HoverEffect" href="stories.html#stories" id="navbarDropdown-2">
+                名人談退休
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link HoverEffect" href="product.html#product" id="navbarDropdown-3">
+                升級退休金
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link HoverEffect" href="https://www.fhtrust.com.tw/account/" id="navbarDropdown-4" target="_blank">
+                立即開戶
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <button 
+      type="button" 
+      id="FAB" 
+      class="d-none d-md-block HoverEffect" 
+      onclick="toggleDialog()" data-gtm-event="float-request-tips" 
+    >
+      <img src="image/floatingButton.png?v=version" />
+    </button>
+    <button type="button" id="FAB_mobile" class="d-flex d-md-none flex-nowrap">
+      <img src="image/floatingButton-left.png" id="Receive_mobile_btn" data-gtm-event="tips1-N" onclick="headToSection('#HomeSection-3')" />
+      <img src="image/floatingButton-right.png" data-gtm-event="float-request-tips" onclick="toggleDialog()"/>
+    </button>
+
+    <div class="Dialog d-none" id="Dialog-1">
+      <div class="Dialog-inner">
+        <div class="Form">
+          <div class="Form-header">
+            <p class="m-0">請確認資料正確，以利手冊寄送</p>
+            <button
+              type="button"
+              onclick="toggleDialog()"
+              class="CloseDialogButton"
+            >
+              <img src="image/closeButton.png?v=version" />
+            </button>
+          </div>
+          <!-- 領投資寶典的form -->
+          <form class="form" action="" data-gtm-form-event="tips-popup-deliever">
+            <div class="Form-body">
+              <input type="hidden" name="str4" value="B" />
+              <img src="image/book.jpg?v=version" width="200" class="mx-auto my-1" />
+              <div class="Form-textField">
+                <span>姓名</span>
+                <input
+                  class="my-1 my-md-2"
+                  type="text"
+                  placeholder="請填寫中文姓名"
+                  name="name"
+                  required
+                  maxlength="20"
+                  id="bookName"
+                />
+                <span class="d-none">此欄位為必填</span>
+              </div>
+              <div class="Form-textField">
+                <span>手機</span>
+                <input
+                  class="my-1 my-md-2"
+                  type="tel"
+                  inputmode="tel"
+                  placeholder="範例：09XXXXXXXX"
+                  name="mobile"
+                  required
+                  minlength="10"
+                  maxlength="20"
+                  id="bookMobile"
+                />
+                <span class="d-none">此欄位為必填</span>
+              </div>
+              <div class="Form-textField">
+                <span>電子信箱</span>
+                <input
+                  class="my-1 my-md-2"
+                  type="email"
+                  inputmode="email"
+                  placeholder=""
+                  name="email"
+                  required
+                  id="bookMail"
+                />
+                <span class="d-none">此欄位為必填</span>
+              </div>
+              <div class="d-flex justify-content-center mt-1">
+                <span class="d-flex align-items-center mx-2">
+                  <input
+                    type="radio"
+                    name="str2"
+                    value="Y"
+                    required
+                    id="bookClient"
+                  />
+                  <label for="bookClient">我是復華客戶</label>
+                </span>
+                <span class="d-flex align-items-center mx-2">
+                  <input
+                    type="radio"
+                    name="str2"
+                    value="N"
+                    id="bookPotential"
+                  />
+                  <label for="bookPotential">非復華客戶</label>
+                </span>
+              </div>
+              <div class="d-flex justify-content-center flex-wrap">
+                <span class="d-flex justify-content-center w-100">
+                  <input
+                    type="checkbox"
+                    name="str3"
+                    value="Y"
+                    required
+                    id="bookPrivacyCheck"
+                  />
+                  <label for="bookPrivacyCheck">
+                    我同意<a class="text-decoration-underline" href="https://www.fhtrust.com.tw/com/announce/personal_announce.html
+                    "
+                      >復華個資保護法</a>
+                  </label>
+                </span>
+                <p class="small d-none">此選項必勾選</p>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="submit" class="btn NormalButton" title="確認送出">
+                  確認送出
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Dialog d-none" id="Dialog-2">
+      <div class="Dialog-inner">
+          <div class="Form">
+            <div class="Form-header">
+                <p class="m-0">表單已成功送出</p>
+                <button type="button" onclick="toggleThanksDialog()" class="CloseDialogButton">
+                  <img src="image/closeButton.png?v=version">
+                </button>
+            </div>
+            <div class="Form-body">
+                <h1>感謝您的參與</h1>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <main id="MainPage-1">
+      <section class="HomeSection" id="main">
+        <div class="container">
+          <div class="row">
+              <img src="image/people.png?v=version" class="d-none d-md-block">
+              <img src="image/people_mobile.png?v=version" class="d-block d-md-none">
+          </div>
+        </div>
+
+        <div class="Headline Animation_defaultShow">
+          <h1>復華退休。金攻略</h1>
+          <h2>掌握投資真理 助你順利闖關 退休金達標</h2>
+        </div>
+      </section>
+      <div class="dataPage" id="Tips"></div>
+      <section class="HomeSection" id="HomeSection-2">
+        <div
+          class="container d-flex flex-column align-items-center h-100"
+        >
+          <div class="Slides mb-3 Animation_scrollShow" active-item="1">
+            <div class="Slides-item">
+              <div class="HomeSectionBgImage">
+                <img src="image/people-2_1.png" class="w-auto" />
+              </div>
+              <div class="HeadLine-withBorder mb-3">
+                <span>1</span>
+                <h3>
+                  專攻大魚比較賺？<br />
+                  穩穩收獲一群小魚，才是累積退休金的長久之計
+                </h3>
+              </div>
+              <div
+                class="HomeSectionContent d-flex flex-column align-items-center"
+              >
+                <p class="HomeSectionContent-article">
+                  退休理財不能只看短期「績效高低」，假設每年猜對的報酬率是+20%，
+                  猜錯是-20%，就算10年間有5年猜對20%，長期累積報酬率也遠不及年複利率6%–12%成果，
+                  退休前至少有10–30年的時間，長期複利的慢錢，遠勝賺短波的快錢。
+                </p>
+                <h6>波段快錢vs.複利慢錢累積報酬率比較</h6>
+                <img src="image/form-1.png?v=version" class="my-3 d-none d-md-block" />
+                <img src="image/form-1_mobile.png" class="my-3 d-block d-md-none" />
+              </div>
+            </div>
+
+            <div class="Slides-item">
+              <div class="HomeSectionBgImage">
+                <img src="image/people-2_2.png" class="w-auto" />
+              </div>
+              <div class="HeadLine-withBorder mb-3">
+                <span>2</span>
+                <h3>
+                  「千萬」一點都不遠！<br />
+                  只要穩紮穩跳，誰都有機會抵達千萬退休金
+                </h3>
+              </div>
+              <div
+                class="HomeSectionContent d-flex flex-column align-items-center"
+              >
+                <p class="HomeSectionContent-article">
+                  大多數人認為，只靠薪水要累積到1,000萬退休金很困難，其實不然。只要每個月投資1萬元，
+                  選擇年化報酬率6%–12%標的，長期持續投資，讓複利效果發威，20-30年就有機會達標。
+                </p>
+                <h6>定時定額投資，累積一千萬所需的時間</h6>
+                <img src="image/form-2.png?v=version" class="my-3 d-none d-md-block" />
+                <img src="image/form-2_mobile.png" class="my-3 d-block d-md-none" />
+              </div>
+            </div>
+
+            <div class="Slides-item">
+              <div class="HomeSectionBgImage">
+                <img
+                  src="image/people-2_3.png"
+                  class="w-auto"
+                  style="margin-left: 110%; margin-bottom: -60%"
+                />
+              </div>
+              <div class="HeadLine-withBorder mb-3">
+                <span>3</span>
+                <h3>
+                  有專業洞察、懂趨吉避險的神隊友<br />
+                  理財路上伴你攻破每個難關
+                </h3>
+              </div>
+              <div
+                class="HomeSectionContent d-flex flex-column align-items-center"
+              >
+                <p class="HomeSectionContent-article">
+                  股市的報酬雖好，波動也大，若遇股災要回到前波高點還得等上好幾年，
+                  退休族可等不了。選擇經歷多次股災，善用負相關股債配置豐富經驗的投資顧問，
+                  助投資人降低資產減損衝擊，股災來臨也不延遲退休計畫。
+                </p>
+                <h6>1998年以來，美國S&P500指數重大股災的波段最大跌幅及回本時間</h6>
+                <img src="image/form-3.png?v=version" class="my-3 d-none d-md-block" />
+                <img src="image/form-3_mobile.png" class="my-3 d-block d-md-none" />
+              </div>
+            </div>
+            
+            <div class="Slides-item">
+              <div class="HomeSectionBgImage">
+                <img src="image/people-2_4.png" class="w-auto" />
+              </div>
+              <div class="HeadLine-withBorder mb-3">
+                <span>4</span>
+                <h3>
+                  投資攻防不只追高，也要見好就收<br />
+                  退休投資才不至白忙一場
+                </h3>
+              </div>
+              <div
+              class="HomeSectionContent d-flex flex-column align-items-center"
+              >
+              <p class="HomeSectionContent-article">
+                全球主要股市都有跌幅超過30%的歷史經驗，越接近退休年齡越需要適度停利，
+                  復華多樣化停利商品，既可從股市中賺取波動財，也可及早設定好預期報酬率停利入袋，
+                  或轉入低波動商品，減少投資的焦慮，長期退休規劃不中斷。
+                </p>
+                <h6>全球主要股市修正幅度的頻率</h6>
+                <img src="image/form-4.png?v=version" class="my-3 d-none d-md-block" />
+                <img src="image/form-4_mobile.png" class="my-3 d-block d-md-none" />
+              </div>
+            </div>
+            <span class="Slides-indicator">
+              <a
+                href="#Tips1"
+                onclick="changeSlide(this, 1)"
+                class="active"
+                data-gtm-event="view-tips1"
+              ></a>
+              <a href="#Tips2" onclick="changeSlide(this, 2)" data-gtm-event="view-tips2"></a>
+              <a href="#Tips3" onclick="changeSlide(this, 3)" data-gtm-event="view-tips3"></a>
+              <a href="#Tips4" onclick="changeSlide(this, 4)" data-gtm-event="view-tips4"></a>
+            </span>
+
+            <button type="button" id="Slides_prev">
+              <img src="image/arrowRight.png?v=version" />
+            </button>
+            <button type="button" id="Slides_next">
+              <img src="image/arrowRight.png?v=version" />
+            </button>
+          </div>
+
+          <button
+            id="Receive_btn"
+            type="button"
+            class="NormalButton d-none d-md-flex HoverEffect"
+            data-gtm-event="tips1-N"
+            onclick="headToSection('#HomeSection-3')"
+          >
+            手刀領取復華退休投資生活貼
+          </button>
+        </div>
+      </section>
+
+      <section class="HomeSection" id="HomeSection-3">
+        <div class="HomeSectionBgImage">
+          <img src="image/people-3.png?v=version" class="w-auto" />
+        </div>
+        <div class="container d-flex flex-column align-items-center">
+          <div class="HeadLine-withBorder mb-3">
+            <h4>學攻略 拿好禮</h4>
+          </div>
+          <div class="HeadLine">
+            <h5>手刀領取生活貼</h5>
+          </div>
+          <div class="HomeSectionContent d-flex flex-column align-items-center">
+            <img src="image/NTimeNote.png?v=version" class="my-3" width="264px" />
+          </div>
+          <form class="form" action="" data-gtm-form-event="tips-submit">
+            <input type="hidden" name="str4" value="A" />
+            <div class="Form Animation_scrollShow">
+              <div class="Form-header">
+                <p class="m-0">請確認資料正確，以利贈品送達</p>
+              </div>
+              <div class="Form-body">
+                <div class="Form-textField">
+                  <span>姓名</span>
+                  <input
+                    class="my-2"
+                    type="text"
+                    placeholder="請填寫中文姓名"
+                    name="name"
+                    required
+                    maxlength="20"
+                    id="awardName"
+                  />
+                  <span class="d-none">此欄位為必填</span>
+                </div>
+                <div class="Form-textField">
+                  <span>手機</span>
+                  <input
+                    class="my-2"
+                    type="text"
+                    inputmode="tel"
+                    placeholder="範例：09XXXXXXXX"
+                    name="mobile"
+                    required
+                    minlength="10"
+                    maxlength="20"
+                    id="awardMobile"
+                  />
+                  <span class="d-none">此欄位為必填</span>
+                </div>
+                <div class="Form-textField">
+                  <span>電子信箱</span>
+                  <input
+                    class="my-2"
+                    type="email"
+                    inputmode="email"
+                    placeholder=""
+                    name="email"
+                    required
+                    maxlength="50"
+                    id="awardMail"
+                  />
+                  <span class="d-none">此欄位為必填</span>
+                </div>
+                <div class="d-flex justify-content-center mt-1">
+                  <span class="d-flex align-items-center mx-2">
+                    <input
+                      type="radio"
+                      name="str2"
+                      value="Y"
+                      required
+                      id="awardClient"
+                    />
+                    <label for="awardClient">我是復華客戶</label>
+                  </span>
+                  <span class="d-flex align-items-center mx-2">
+                    <input
+                      type="radio"
+                      name="str2"
+                      value="N"
+                      id="awardPotential"
+                    />
+                    <label for="awardPotential">非復華客戶</label>
+                  </span>
+                </div>
+                <div class="d-flex justify-content-center flex-wrap">
+                  <span class="d-flex justify-content-center w-100">
+                    <input
+                      required
+                      type="checkbox"
+                      name="str3"
+                      value="Y"
+                      id="awardPrivacyCheck"
+                    />
+                    <label for="awardPrivacyCheck">
+                      我同意<a class="text-decoration-underline" href="https://www.fhtrust.com.tw/com/announce/personal_announce.html">復華個資保護法</a>
+                    </label>
+                  </span>
+                  <p class="small pb-0 d-none">此選項必勾選</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="NormalButton HoverEffect" >
+                    確認送出
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+            
+      <section class="HomeSection" id="HomeSection-7">
+        <div class="container d-flex flex-column">
+            <div class="Headline d-flex align-items-center">
+                <h6>活動辦法</h6>
+                <button type="button" onclick="toggleFooter()">
+                  <img src="image/arrowDown.png?v=version" class="ms-3" id="footerToggler">
+                </button>
+            </div>
+            <p class="pt-3 d-none" id="toggleContent">
+              本活動「復華退休金攻略」(以下稱為本活動) 活動期間：即日起至2022/3/11
+              活動說明:
+              (1)本活動提供N次貼贈品限量500份送完為止，透過本活動網站點選索取N次貼並留下資料者，將由專人聯繫寄送贈品，若留下之個人資料有誤導致無法聯繫者，視同放棄資格。
+              (2)透過本活動網站點選索取50+聯名退休財知道手冊者，復華投信將會以電子郵件方式寄送電子PDF檔案一份至您所填寫的E-mail。
+              <br />
+              <br />
+              注意事項:
+              (1)本活動僅限設籍於台灣、金門、澎湖、馬祖地區之中華民國國民參加
+              (2)主辦單位保有一切修改及取消本活動的權利而不作事前通知，亦有權對本活動之所有事宜做出解釋或裁決及變更活動獎品及辦法之權利，任何變更內容及其他詳細注意事項，則公告於活動網站。
+              (3)主辦單位僅使用參加者所提供之個人資料於此次活動用途，且遵守【個人資料保護法】相關規定，以維護參加者權益。參加者參與本活動即同意相關個人資訊由主辦單位於活動範圍內進行蒐集、處理及利用，參加者並授權主辦單位公開公佈其部分隱碼姓名與手機號碼資訊於中獎名單。
+              (4)如有任何活動相關問題請洽主辦單位客服信箱service@fhtrust.com.tw，會安排客服人員盡快回覆及處理 
+              (5)其他未盡事宜，悉依主辦單位相關規定及解釋為準。
+            </p>
+            <p class="py-2">
+              「以上資料為舉例說明，不代表未來實際績效，本網頁所提及之相關數據資料僅供說明，不代表投資決策之建議。」
+              投資人因不同時間進場，將有不同之投資績效，過去之績效亦不代表未來績效之保證。投資一定有風險，基金投資有賺有賠，
+              申購前應詳閱公開說明書(投資人須知)本基金經金管會核准或同意生效，惟不表示絕無風險。本公司以往之經理績效不保證基金之最低投資收益；
+              本公司除盡善良管理人之注意義務外，不負責基金之盈虧，亦不保證最低之收益，投資人申購前應詳閱基金公開說明書。
+              本理財服務名稱「月月領」三字係指由投資人指定每月領回金額後，每月自月月領專戶辦理約定金額之復華貨幣市場基金受益憑證買回交易，
+              非對基金未來績效或投資人最低投資收益之保證。投資人應瞭解並承擔交易可能產生之損益，且本公司所提供金融服務之最大可能損失達原始投資金額。
+              基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動。
+              惟基金過去分配金額不代表未來分配金額，每期分配金額可能因市場因素、基金實際獲利情形而上下波動，經理公司不保證每期分配或分配金額。
+              同時經理公司將評估各期可分配收益之情形及考量分配收益之可持續性，自行決定應分配之金額或不分配，故基金淨值之走勢亦不等同於分配金額之上升或降低趨勢。
+              基金投資涉及新興市場部份，因其波動性與風險程度可能較高，且其政治與經濟情勢穩定度可能低於已開發國家，也可能使資產價值受不同程度之影響。
+              本基金得投資於大陸地區有價證券，其投資上限以基金信託契約及法令規定為準，投資人亦須留意大陸市場特定政治、經濟與市場等投資風險。
+              有關基金應負擔之費用（境外基金含分銷費用）已揭露於基金之公開說明書或投資人須知中，投資人可向本公司及基金之銷售機構索取，
+              或至公開資訊觀測站、境外基金資訊觀測站及本公司網站(<a target="_blank" href="https://www.fhtrust.com.tw">https://www.fhtrust.com.tw</a>)中查詢。
+          </p>
+          <p class="mt-4">
+              復華證券投資信託股份有限公司 <br />
+              地址：台北市中山區八德路二段308號8樓 <br />
+              電話：<a href="tel:(02)8161-6800">(02)8161-6800</a>  客服信箱：<a href="mailto: service@fhtrust.com.tw">service@fhtrust.com.tw</a> <br />
+              客服專線：<a href="tel:0800-005-168">0800-005-168</a> (週一至週五上午9:00至下午6:00)<br />
+              本公司營業執照文號：一百零八金管投信新字第零壹二號<br />
+          </p>
+        </div>
+    </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/general.js?v=version"></script>
+    <script src="js/leads-api.js?v=version"></script>
+    <script>
+      $(function () {
+        $('form').leads(function () {
+          console.log(this);
+          var eventName = $(this).data('gtm-form-event');
+          if (eventName) {
+            gtmClickTrack(eventName);
+          }
+
+          toggleThanksDialog()
+        });
+
+       
+      });
+    </script>
+  </body>
+</html>

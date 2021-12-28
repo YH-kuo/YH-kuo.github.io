@@ -1,0 +1,11 @@
+@import "variable";
+
+.btn:not([class*="-outline-"]) {
+    color: #FFF;
+    
+    &:hover {
+        color: #FFF;
+    }
+}
+
+@import "bootstrap/scss/_bootstrap";

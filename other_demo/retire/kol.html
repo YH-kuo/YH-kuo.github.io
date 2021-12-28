@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>首頁</title>
+</head>
+
+<body>
+
+	<!-- 規劃退休金的form -->
+	<form class="form" action="">
+		<div class="form-container">
+			<div class="form-control">
+				<label class="label form-label" for="PensionName">姓名</label>
+				<input type="text" class="inputText form-inputText" name="name" required maxlength="20" id="PensionName">
+			</div>
+			<div class="form-control">
+				<label class="label form-label" for="PensionMobile">手機</label>
+				<input type="tel" inputmode="tel" class="inputText form-inputText" name="mobile" required maxlength="20" id="PensionMobile">
+			</div>
+			<div class="form-control">
+				<label class="label form-label" for="PensionMail">E-mail</label>
+				<input type="email" inputmode="email" class="inputText form-inputText" name="email" required maxlength="50" id="PensionMail" >
+			</div>
+			<div class="form-control">
+				<label class="label form-label" for="PensionAmount">預計退休後月領金額</label>
+				<input type="text" class="inputText form-inputText" name="str1" maxlength="30" id="PensionAmount">
+			</div>
+			<div class="form-control">
+				<div class="row">
+					<div class="form-control form-control--check">
+						<input type="radio" class="inputRadio form-inputRadio" name="str2" value="Y" required id="PensionClient">
+						<label for="PensionClient" class="label--input form-label--input">我是復華客戶</label>
+					</div>
+					<div class="form-control form-control--check">
+						<input type="radio" class="inputRadio form-inputRadio" name="str2" value="N" id="PensionPotential">
+						<label for="PensionPotential" class="label--input form-label--input">非復華客戶</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-control">
+				<div class="row">
+					<div class="form-control form-control--check">
+						<input type="checkbox" class="inputCheckbox form-inputCheckbox" name="str3" value="Y" required id="PensionPrivacyCheck">
+						<label for="PensionPrivacyCheck" class="label--input form-label--input">復華個資保護法</label>
+					</div>
+				</div>
+			</div>
+			<div class="btnContainer">
+				<input type="hidden" name="str4" value="C">
+				<button type="submit" class="btn" title="確認送出">我要規畫退休金</button>
+			</div>
+		</div>
+	</form>
+
+	<!-- 領投資寶典的form -->
+	<form class="form" action="">
+		<div class="form-container">
+			<div class="form-control">
+				<label class="label form-label" for="bookName">姓名</label>
+				<input type="text" class="inputText form-inputText" name="name" required maxlength="20" id="bookName">
+			</div>
+			<div class="form-control">
+				<label class="label form-label" for="bookMobile">手機</label>
+				<input type="tel" inputmode="tel" class="inputText form-inputText" name="mobile" required maxlength="20" id="bookMobile">
+			</div>
+			<div class="form-control">
+				<label class="label form-label" for="bookMail">E-mail</label>
+				<input type="email" inputmode="email" class="inputText form-inputText" name="email" required maxlength="50" id="bookMail">
+			</div>
+			<div class="form-control">
+				<div class="row">
+					<div class="form-control form-control--check">
+						<input type="radio" class="inputRadio form-inputRadio" name="str2" value="Y" required id="bookClient">
+						<label for="bookClient" class="label--input form-label--input">我是復華客戶</label>
+					</div>
+					<div class="form-control form-control--check">
+						<input type="radio" class="inputRadio form-inputRadio" name="str2" value="N" id="bookPotential">
+						<label for="bookPotential" class="label--input form-label--input">非復華客戶</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-control">
+				<div class="row">
+					<div class="form-control form-control--check">
+						<input type="checkbox" class="inputCheckbox form-inputCheckbox" name="str3" value="Y" required id="bookPrivacyCheck">
+						<label for="bookPrivacyCheck" class="label--input form-label--input">復華個資保護法</label>
+					</div>
+				</div>
+			</div>
+			<div class="btnContainer">
+				<input type="hidden" name="str4" value="D">
+				<button type="submit" class="btn" title="確認送出">確認送出</button>
+			</div>
+		</div>
+	</form>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/leads-api.js?v=version"></script>
+<script>
+	$(function () {
+		$('form').leads(function(){
+			alert('success');
+		});
+	});
+</script>
+</body>
+
+</html>
