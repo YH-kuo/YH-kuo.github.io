@@ -1535,35 +1535,148 @@ button.NormalButton {
 }
 
 //名人談退休
-#stories{
+#kol{
     transition: all 0.3s;
     .Slides{
+        min-height:initial;
+        &[active-item="1"] {
+            .Slides {
+                &-item {
+                    @media (max-width: 767.98px) {
+                        width: 100%;
+                    }
+                    
+                    &:first-of-type {
+                        left: calc(50% - 355px);
+                        @media (max-width:991px) {
+                            left: calc(50% - 300px);
+                        }
+                        
+                        @media (max-width: 767.98px) {
+                            left: 0;
+                        }
+                    }
+                    
+                    &:nth-of-type(2),
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        left: 100vw;
+
+                        @media (max-width: 767.98px) {
+                            left: 200vw;
+                        }
+                    }
+                }
+            }
+
+            #Slides_prev {
+                display: none;
+            }
+        }
+
+        &[active-item="2"] {
+            .Slides {
+                &-item {
+                    @media (max-width: 767.98px) {
+                        width: 100%;
+                    }
+
+                    &:first-of-type {
+                        left: -100vw;
+
+                        @media (max-width: 767.98px) {
+                            left: -200vw;
+                        }
+                    }
+                    
+                    &:nth-of-type(2) {
+                        left: calc(50% - 430px);
+                        @media (max-width:991px) {
+                            left: calc(50% - 300px);
+                        }
+
+                        @media (max-width: 767.98px) {
+                            left: 0;
+                        }
+                    }
+
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        left: 100vw;
+
+                        @media (max-width: 767.98px) {
+                            left: 200vw;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &[active-item="3"] {
+            .Slides {
+                &-item {
+                    @media (max-width: 767.98px) {
+                        width: 100%;
+                    }
+
+                    &:first-of-type,
+                    &:nth-of-type(2) {
+                        left: -100vw;
+
+                        @media (max-width: 767.98px) {
+                            left: -200vw;
+                        }
+                    }
+                    
+                    &:nth-of-type(3) {
+                        left: calc(50% - 430px);
+                        @media (max-width:991px) {
+                            left: calc(50% - 300px);
+                        }
+
+                        @media (max-width: 767.98px) {
+                            left: 0;
+                        }
+                    }
+
+                    &:nth-of-type(4) {
+                        left: 100vw;
+
+                        @media (max-width: 767.98px) {
+                            left: 200vw;
+                        }
+                    }
+                }
+            }
+        }
     }
     .Slides-item{
         top: 0;
-        margin-top: 30px;
     }
     .Slides-indicator{
         background-color: #fff8ed;
+        padding: 0.5rem;
         width: 100%;
         justify-content: center;
     }
     .read-more{
         cursor: pointer;
-        position: absolute;
-        bottom: 18px;
-        padding: 2rem 0 0.5rem 0;
+        position: relative;
         display: flex;
-        width: 100%;
-        color: #695345;
-        font-size: 0.9rem;
-        font-weight: bold;
-        letter-spacing: 2px;
         justify-content: center;
-        background: -moz-linear-gradient(top, rgba(255,248,237,0) 0%, rgba(255,248,237,1) 50%, rgba(255,248,237,1) 100%);
-        background: -webkit-linear-gradient(top, rgba(255,248,237,0) 0%,rgba(255,248,237,1) 50%,rgba(255,248,237,1) 100%);
-        background: linear-gradient(to bottom, rgba(255,248,237,0) 0%,rgba(255,248,237,1) 50%,rgba(255,248,237,1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff8ed', endColorstr='#fff8ed',GradientType=0 );
+        bottom: 2rem;
+        width: 100%;
+        // background-color: #fff8ed;
+        padding: 1rem 0;
+        span{
+            font-size: 18px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            padding: 0.5rem 1rem ;
+            display: inline-flex;
+            color: #fff;
+            background-color: #a02b37;
+        }
     }
     @media (max-width: 767.98px) {
         >.container {
@@ -1572,108 +1685,228 @@ button.NormalButton {
         .Slides-item{
             padding: 0;
         }
+        .read-more {
+            span{
+                font-size: 12px;
+            }
+        }
     }
 }
 .story-box{
     width: 100%;
-    background-color: #fee6ba;
+    background-color: #ffe6ba;
     border-radius: 10px;
-    margin-top: 120px;
+    margin-top: calc(1rem + #{$headerHeight});
     .story-header{
-        width: 626px;
         display: flex;
         align-items: center;
-        padding: 0 1rem;
-        transform: translateY(-50%);
-        .icon-img{
-            position: absolute;
-            width: 180px;
-            height: 180px;
-            border-radius: 100px;
-            background-size: cover;
-            background-position: center;
-            border: 8px solid #b42b37;
-            z-index: 2;
-        }
+        padding: 1rem 2rem;
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 200px;
         .story-title{
-            width: 100%;
-            margin-left: 100px;
-            background-color: #fff;
-            border: 5px solid #b42b37;
-            border-bottom: none;
-            color: #b42b37;
-            position: relative;
             h3{
-                font-size: 1.8rem;
+                color: #a02b37;
+                font-size: 35px;
                 font-weight: bold;
-                letter-spacing: 1px;
-                margin: 0;
-                padding: 0.5rem;
-                padding-left: 80px;
+                margin-bottom: 1rem;
             }
             .story-subTitle{
-                display: block;
-                padding: 0.1rem 0.5rem;
-                background-color: #b42b37;
-                color: #fff;
-                padding-left: 80px;
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-            .story-source{
-                position: absolute;
-                width: 100%;
-                font-weight: bold;
-                font-size: 0.95rem;
-                text-align: right;
                 color: #695345;
-                padding: 0.2rem 0;
+                font-weight: bold;
+                font-size: 25px;
+            }
+        }
+        @media (max-width:991px) {
+            padding: 1rem;
+            .story-title{
+                h3{
+                    font-size: 26px;
+                    margin-bottom: 1rem;
+                }
+                .story-subTitle{
+                    font-size: 20px;
+                }
+            }
+        }
+        @media (max-width:767.98px) {
+            min-height: 150px;
+        }
+        @media (max-width:575px) {
+            min-height: 150px;
+            .story-title{
+                h3{
+                    font-size: 5vw;
+                }
+                .story-subTitle{
+                    font-size: 4vw;
+                }
+            }
+        }
+    }
+    &.story1{
+        .story-header{
+            background-color: #d5dadd;
+            background-image: url(../image/icon-img1.png?v=version);
+        }
+        .story-body{
+            width: 710px;
+            @media (max-width:991px) {
+                width: 600px;
+            }
+            @media (max-width:767.98px) {
+                width: 100%;
+            }
+        }
+    }
+    &.story2{
+        .story-header{
+            background-color: #c5c7cc;
+            background-image: url(../image/icon-img2.png?v=version);
+            h3>br{
+                display: none;
+                @media (max-width:575px) {
+                    display: block;
+                }
+            }
+        }
+        .story-body{
+            width: 860px;
+            @media (max-width:991px) {
+                width: 600px;
+            }
+            @media (max-width:767.98px) {
+                width: 100%;
+            }
+        }
+    }
+    &.story3{
+        .story-header{
+            background-color: #b2bbcf;
+            background-image: url(../image/icon-img3.png?v=version);
+            h3>br+br{
+                display: none;
+                @media (max-width:575px) {
+                    display: block;
+                }
+            }
+        }
+        .story-body{
+            width: 860px;
+            @media (max-width:991px) {
+                width: 600px;
+            }
+            @media (max-width:767.98px) {
+                width: 100%;
             }
         }
     }
     .story-body{
-        width: 626px;
-        padding: 0 2rem 1rem;
+        padding: 1rem 2rem;
         letter-spacing: 1px;
         text-align: justify;
+        .overflow-box{
+            overflow: hidden;
+            margin-bottom: 3rem;
+            max-height: calc(100vh - #{$headerHeight} - 400px);
+        }
+        .story-source{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            font-size: 18px;
+            color: #695345;
+        }
         p{
             color: #695345;
-            font-size: 0.95rem;
+            font-size: 18px;
+            font-weight: bold;
         }
         .part-title{
-            font-size: 1.1rem;
+            font-size: 21px;
             color: #a02b37;
             display: block;
             font-weight: bold;
         }
         .part-disclaimer{
             font-weight: bold;
+            color: #3e2c20;
         }
-    }
-    @media (max-width: 767.98px) {
-        border-radius: 0px;
-        .story-header{
+        //市場先生 表格
+        .mr_market_table{
             width: 100%;
-            align-items: flex-end;
-            .icon-img{
-                width: 100px;
-                height: 100px;
-                border: 5px solid #b42b37;
+            max-width: 600px;
+            background-color: #FFF3DA;
+            text-align: center;
+            margin: 0 auto;
+            font-weight: bold;
+            .dn{
+                color: #008342;
             }
-            .story-title{
-                margin-left: 50px;
-                h3{
-                    font-size: 1.2rem;
-                    padding-left: 50px;
+            .up{
+                color: #C11920;
+            }
+            thead{
+                tr{
+                    border-bottom: 1px solid #565250;
+                    th{
+                        padding: 1rem;
+                        &:not(:last-child){
+                            border-right: 1px solid #565250;
+                        }
+                    }
+                    &:nth-child(2){
+                        th{
+                            background-color: #FCD471;
+                        }
+                    }
                 }
-                .story-subTitle{
-                    padding-left: 50px;
-                    font-size: 0.9rem;
+            }
+            tbody{
+                tr{
+                    &:not(:last-child){
+                        border-bottom: 1px solid #565250;
+                    }
+                    td{
+                        padding: 1rem;
+                        &:not(:last-child){
+                            border-right: 1px solid #565250;
+                        }
+                    }
                 }
             }
         }
-        .story-body{
+        .table_supplement{
             width: 100%;
+            max-width: 600px;
+            font-size: 8px;
+            margin: 0.5rem auto;
+        }
+    
+        @media (max-width: 767.98px) {
+            padding: 1rem;
+            .story-source{
+                font-size: 12px;
+            }
+            p{
+                font-size: 13px;
+            }
+            .part-title{
+                font-size: 15px;
+            }
+            .mr_market_table{
+                tbody,thead{
+                    tr{
+                        td,th{
+                            font-size: 13px;
+                            padding: 0.5rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }
