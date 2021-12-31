@@ -7,6 +7,7 @@ $(document).ready(function () {
 
     if (index > 1) {
       console.log("slide to",index-1);
+      location.hash = '#'+dataPage+(index-1);
 
       $slides.attr('active-item', index - 1);
       $('.Slides-indicator a.active').removeClass('active');
@@ -28,9 +29,12 @@ $(document).ready(function () {
     let $slides = $(this).closest('.Slides');
     let index = parseInt($slides.attr('active-item'));
     let slidesItems = document.getElementsByClassName('Slides-item');
+    // location.hash = '#'+dataPage;
+    // console.log(window.location.hash);
 
     if (index < slidesItems.length) {
       console.log("slide to",index+1);
+      location.hash = '#'+dataPage+(index+1);
 
       $slides.attr('active-item', index + 1);
       $('.Slides-indicator a.active').removeClass('active');
