@@ -14035,6 +14035,7 @@ button.NormalButton {
   }
   .story-box .story-body p {
     font-size: 13px;
+    padding: 0 1rem;
   }
   .story-box .story-body .part-title {
     font-size: 15px;
