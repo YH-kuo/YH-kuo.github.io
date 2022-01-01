@@ -13782,6 +13782,11 @@ button.NormalButton {
   }
 }
 
+#kol + #product3 {
+  min-height: initial;
+  padding-bottom: 60px;
+}
+
 .story-box {
   width: 100%;
   background-color: #ffe6ba;
