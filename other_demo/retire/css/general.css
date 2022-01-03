@@ -13975,8 +13975,8 @@ button.NormalButton {
 }
 
 .story-box .story-body .part-disclaimer {
-  font-weight: bold;
-  color: #3e2c20;
+  font-weight: 900;
+  color: #000;
 }
 
 .story-box .story-body .mr_market_table {
