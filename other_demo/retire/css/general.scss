@@ -1027,6 +1027,7 @@ button.NormalButton {
 
         @media (max-width: 767.98px) {
             margin-bottom: -24px !important;
+            padding-right: 50px;
             z-index: 2;
             // align-self: self-start;
             margin-left: 12px;
@@ -1038,9 +1039,9 @@ button.NormalButton {
             font-weight: normal;
 
             @media (max-width: 767.98px) {
+                text-align: center;
                 font-size: 18px;
                 letter-spacing: 0.1px;
-                text-align: left;
                 font-weight: bold;
                 margin-left: 4px;
             }
@@ -1140,7 +1141,7 @@ button.NormalButton {
         color: #a02b37;
         
         @media (max-width: 767.98px) {
-            margin-left: 16px;
+            margin: 0 auto;
         }
 
         h3 {
@@ -1186,7 +1187,9 @@ button.NormalButton {
             font-size: 14px;
             line-height: 23px;
             letter-spacing: 0.8px;
-            margin-bottom: 6px;
+            text-align: center;
+            margin: 6px auto;
+            margin-top: 0px;
         }
     }
 
@@ -1547,7 +1550,7 @@ button.NormalButton {
                     }
                     
                     &:first-of-type {
-                        left: calc(50% - 355px);
+                        left: calc(50% - 430px);
                         @media (max-width:991px) {
                             left: calc(50% - 300px);
                         }
@@ -1744,7 +1747,7 @@ button.NormalButton {
                     font-size: 5vw;
                 }
                 .story-subTitle{
-                    font-size: 4vw;
+                    font-size: 4.2vw;
                 }
             }
         }
@@ -1755,7 +1758,7 @@ button.NormalButton {
             background-image: url(../image/icon-img1.png?v=version);
         }
         .story-body{
-            width: 710px;
+            width: 860px;
             @media (max-width:991px) {
                 width: 600px;
             }
@@ -1896,11 +1899,11 @@ button.NormalButton {
                 font-size: 12px;
             }
             p{
-                font-size: 13px;
+                font-size: 17px;
                 padding: 0 1rem;
             }
             .part-title{
-                font-size: 15px;
+                font-size: 17px;
             }
             .mr_market_table{
                 tbody,thead{

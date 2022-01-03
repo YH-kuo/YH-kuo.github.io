@@ -13075,6 +13075,7 @@ button.NormalButton {
 @media (max-width: 767.98px) {
   #product3 .HeadLine-withFullBorder {
     margin-bottom: -24px !important;
+    padding-right: 50px;
     z-index: 2;
     margin-left: 12px;
   }
@@ -13088,9 +13089,9 @@ button.NormalButton {
 
 @media (max-width: 767.98px) {
   #product3 .HeadLine-withFullBorder h3, #product3 .HeadLine-withFullBorder .h3 {
+    text-align: center;
     font-size: 18px;
     letter-spacing: 0.1px;
-    text-align: left;
     font-weight: bold;
     margin-left: 4px;
   }
@@ -13192,7 +13193,7 @@ button.NormalButton {
 
 @media (max-width: 767.98px) {
   #product2 .HeadLine-withFullBorder {
-    margin-left: 16px;
+    margin: 0 auto;
   }
 }
 
@@ -13244,7 +13245,9 @@ button.NormalButton {
     font-size: 14px;
     line-height: 23px;
     letter-spacing: 0.8px;
-    margin-bottom: 6px;
+    text-align: center;
+    margin: 6px auto;
+    margin-top: 0px;
   }
 }
 
@@ -13618,7 +13621,7 @@ button.NormalButton {
 }
 
 #kol .Slides[active-item="1"] .Slides-item:first-of-type {
-  left: calc(50% - 355px);
+  left: calc(50% - 430px);
 }
 
 @media (max-width: 991px) {
@@ -13848,7 +13851,7 @@ button.NormalButton {
     font-size: 5vw;
   }
   .story-box .story-header .story-title .story-subTitle {
-    font-size: 4vw;
+    font-size: 4.2vw;
   }
 }
 
@@ -13858,7 +13861,7 @@ button.NormalButton {
 }
 
 .story-box.story1 .story-body {
-  width: 710px;
+  width: 860px;
 }
 
 @media (max-width: 991px) {
@@ -14039,11 +14042,11 @@ button.NormalButton {
     font-size: 12px;
   }
   .story-box .story-body p {
-    font-size: 13px;
+    font-size: 17px;
     padding: 0 1rem;
   }
   .story-box .story-body .part-title {
-    font-size: 15px;
+    font-size: 17px;
   }
   .story-box .story-body .mr_market_table tbody tr td, .story-box .story-body .mr_market_table tbody tr th, .story-box .story-body .mr_market_table thead tr td, .story-box .story-body .mr_market_table thead tr th {
     font-size: 13px;
