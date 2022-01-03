@@ -13734,6 +13734,10 @@ button.NormalButton {
   }
 }
 
+#kol .Slides[active-item="3"] #Slides_next {
+  display: none;
+}
+
 #kol .Slides-item {
   top: 0;
 }
