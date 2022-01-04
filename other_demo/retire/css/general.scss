@@ -1867,6 +1867,7 @@ button.NormalButton {
                 &::before{
                     content: "＊";
                     font-size: 0.9rem;
+                    vertical-align: text-top;
                     margin-left: -1rem;
                     font-family: cursive;
                 }
