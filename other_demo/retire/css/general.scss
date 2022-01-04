@@ -338,13 +338,17 @@ button.NormalButton {
         @media (max-width: 767.98px) {
             padding: 6px 4px;
         }
+        @media (max-width:360px) {
+            flex-direction: column;
+        }
 
         a {
             text-decoration: none;
             width: 130px;
             border: none;
             border-radius: 10px;
-            background-color: #bb9663;
+            // background-color: #bb9663;
+            background-color: #bbbbbb;
             margin: 4px 8px;
             color: #FFF;
             padding-top: 6px;
@@ -355,6 +359,7 @@ button.NormalButton {
             align-items: center;
             justify-content: center;
             white-space: nowrap;
+            cursor: default;
             
             @media (max-width: 767.98px) {
                 border-radius: 5px;
@@ -376,7 +381,7 @@ button.NormalButton {
             }
             
             &:hover {
-                background-color: #a02b37;
+                // background-color: #a02b37;
             }
         }
 
@@ -397,9 +402,16 @@ button.NormalButton {
             letter-spacing: 0.2px;
             color: #bb9663;
             margin: 2px 0;
+            span{
+                display: block;
+                font-size: 17px;
+            }
 
             @media (max-width: 767.98px) {
                 font-size: 14px;
+                span{;
+                    font-size: 11px;
+                }
             }
         }
     }
