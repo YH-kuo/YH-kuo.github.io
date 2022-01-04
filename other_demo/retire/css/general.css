@@ -12308,7 +12308,7 @@ button.NormalButton {
   width: 130px;
   border: none;
   border-radius: 10px;
-  background-color: #bbbbbb;
+  background-color: #bb9663;
   margin: 4px 8px;
   color: #FFF;
   padding-top: 6px;
@@ -12325,7 +12325,6 @@ button.NormalButton {
       -ms-flex-pack: center;
           justify-content: center;
   white-space: nowrap;
-  cursor: default;
 }
 
 @media (max-width: 767.98px) {
@@ -12349,6 +12348,19 @@ button.NormalButton {
   .LinksTable-item a img {
     height: 16px;
   }
+}
+
+.LinksTable-item a:hover {
+  background-color: #a02b37;
+}
+
+.LinksTable-item a.no-open {
+  cursor: default;
+  background-color: #bbbbbb;
+}
+
+.LinksTable-item a.no-open:hover {
+  background-color: #bbbbbb;
 }
 
 .LinksTable-item h5, .LinksTable-item .h5 {

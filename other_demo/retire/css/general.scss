@@ -347,8 +347,7 @@ button.NormalButton {
             width: 130px;
             border: none;
             border-radius: 10px;
-            // background-color: #bb9663;
-            background-color: #bbbbbb;
+            background-color: #bb9663;
             margin: 4px 8px;
             color: #FFF;
             padding-top: 6px;
@@ -359,7 +358,6 @@ button.NormalButton {
             align-items: center;
             justify-content: center;
             white-space: nowrap;
-            cursor: default;
             
             @media (max-width: 767.98px) {
                 border-radius: 5px;
@@ -381,7 +379,14 @@ button.NormalButton {
             }
             
             &:hover {
-                // background-color: #a02b37;
+                background-color: #a02b37;
+            }
+            &.no-open{
+                cursor: default;
+                background-color: #bbbbbb;
+                &:hover {
+                    background-color: #bbbbbb;
+                }
             }
         }
 
