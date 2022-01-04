@@ -12387,6 +12387,7 @@ button.NormalButton {
 .LinksTable-item h4 span, .LinksTable-item .h4 span {
   display: block;
   font-size: 17px;
+  color: #a02b37;
 }
 
 @media (max-width: 767.98px) {

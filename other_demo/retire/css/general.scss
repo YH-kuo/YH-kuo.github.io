@@ -410,11 +410,12 @@ button.NormalButton {
             span{
                 display: block;
                 font-size: 17px;
+                color: #a02b37;
             }
 
             @media (max-width: 767.98px) {
                 font-size: 14px;
-                span{;
+                span{
                     font-size: 11px;
                 }
             }
