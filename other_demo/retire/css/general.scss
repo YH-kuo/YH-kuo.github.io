@@ -384,6 +384,10 @@ button.NormalButton {
             &.no-open{
                 cursor: default;
                 background-color: #bbbbbb;
+                color: rgba(255, 255, 255, 0.7);
+                img{
+                    opacity: 0.7;
+                }
                 &:hover {
                     background-color: #bbbbbb;
                 }
@@ -1852,6 +1856,25 @@ button.NormalButton {
             color: #695345;
             font-size: 18px;
             font-weight: 600;
+        }
+        ul{
+            list-style:none;
+            color: #695345;
+            font-size: 18px;
+            font-weight: 600;
+            li{
+                &::before{
+                    content: "＊";
+                    margin-left: -1rem;
+                    font-family: cursive;
+                }
+            }
+            .hideBr{
+                display: none;
+                @media (max-width:767px) {
+                    display: block;
+                }
+            }
         }
         .part-title{
             font-size: 21px;
