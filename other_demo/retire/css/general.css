@@ -14012,6 +14012,7 @@ button.NormalButton {
   color: #695345;
   font-size: 18px;
   font-weight: 600;
+  padding-left: 1rem;
 }
 
 .story-box .story-body ul li::before {
@@ -14025,6 +14026,10 @@ button.NormalButton {
 }
 
 @media (max-width: 767px) {
+  .story-box .story-body ul {
+    padding: 0 1rem;
+    padding-left: 2rem;
+  }
   .story-box .story-body ul .hideBr {
     display: block;
   }

@@ -1862,6 +1862,7 @@ button.NormalButton {
             color: #695345;
             font-size: 18px;
             font-weight: 600;
+            padding-left: 1rem;
             li{
                 &::before{
                     content: "＊";
@@ -1871,7 +1872,11 @@ button.NormalButton {
             }
             .hideBr{
                 display: none;
-                @media (max-width:767px) {
+            }
+            @media (max-width:767px) {
+                padding: 0 1rem;
+                padding-left: 2rem;
+                .hideBr{
                     display: block;
                 }
             }
