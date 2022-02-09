@@ -1157,6 +1157,11 @@ button.NormalButton {
         }
     }
 
+    @media (max-width: 767.98px) {
+        .fix-width{
+            max-width: 100%;
+        }
+    }
     .HeadLine-withFullBorder {
         padding-left: 50px;
         position: relative;
@@ -1223,6 +1228,19 @@ button.NormalButton {
 
         &.d-block.d-md-none {
         } 
+    }
+    .form_7{
+        img{
+            padding: 20px 10px;
+            background-color: #ffe6ba;
+            border-radius: 10px;
+            @media (max-width:767px) {
+                border-radius: 0px;
+                position: relative;
+                left: -0.75rem;
+                width: 100vw !important;
+            }
+        }
     }
 
     .LinksTable-head {

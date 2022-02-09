@@ -13218,6 +13218,12 @@ button.NormalButton {
   }
 }
 
+@media (max-width: 767.98px) {
+  #product2 .fix-width {
+    max-width: 100%;
+  }
+}
+
 #product2 .HeadLine-withFullBorder {
   padding-left: 50px;
   position: relative;
@@ -13286,6 +13292,21 @@ button.NormalButton {
 
 #product2 img.d-none.d-md-block {
   width: 580px;
+}
+
+#product2 .form_7 img {
+  padding: 20px 10px;
+  background-color: #ffe6ba;
+  border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  #product2 .form_7 img {
+    border-radius: 0px;
+    position: relative;
+    left: -0.75rem;
+    width: 100vw !important;
+  }
 }
 
 @media (max-width: 767.98px) {
