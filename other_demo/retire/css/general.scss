@@ -1235,6 +1235,7 @@ button.NormalButton {
             background-color: #ffe6ba;
             border-radius: 10px;
             @media (max-width:767px) {
+                padding: 0px;
                 border-radius: 0px;
                 position: relative;
                 left: -0.75rem;

@@ -13302,6 +13302,7 @@ button.NormalButton {
 
 @media (max-width: 767px) {
   #product2 .form_7 img {
+    padding: 0px;
     border-radius: 0px;
     position: relative;
     left: -0.75rem;
