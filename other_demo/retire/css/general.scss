@@ -1294,7 +1294,12 @@ button.NormalButton {
         }
     }
 
-
+    @media (max-width: 767.98px) {
+        .LinksTable{
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
     .LinksTable-head {
         img {
             @media (max-width: 767.98px) {
