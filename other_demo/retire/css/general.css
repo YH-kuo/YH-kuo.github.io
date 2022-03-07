@@ -12384,7 +12384,7 @@ button.NormalButton {
 }
 
 .LinksTable-item h4, .LinksTable-item .h4 {
-  font-size: 24px;
+  font-size: 22px;
   letter-spacing: 0.2px;
   color: #bb9663;
   margin: 2px 0;
@@ -14147,6 +14147,53 @@ button.NormalButton {
   .story-box .story-body .mr_market_table tbody tr td, .story-box .story-body .mr_market_table tbody tr th, .story-box .story-body .mr_market_table thead tr td, .story-box .story-body .mr_market_table thead tr th {
     font-size: 13px;
     padding: 0.5rem;
+  }
+}
+
+.query_winners span {
+  display: inline-block;
+}
+
+.finished {
+  position: relative;
+}
+
+.finished span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+@media (max-width: 767.98px) {
+  .finished span {
+    width: 330px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 450px) {
+  .finished span {
+    width: 73vw;
+    height: 73vw;
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=general.css.map */
