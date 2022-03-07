@@ -2023,9 +2023,10 @@ button.NormalButton {
             height:330px;
         }
         @media (max-width: 450px) {
-            width:73vw;
-            height:73vw;
+            width:75vw;
+            height:75vw;
             font-size: 18px;
+            margin-left: 20px;
         }
     }
 }
