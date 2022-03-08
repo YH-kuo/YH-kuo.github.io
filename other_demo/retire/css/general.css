@@ -14211,6 +14211,7 @@ button.NormalButton {
   .finished::after {
     width: 75%;
     padding-bottom: 75%;
+    margin-right: -16px;
   }
 }
 
