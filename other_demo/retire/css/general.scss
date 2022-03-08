@@ -2021,6 +2021,7 @@ button.NormalButton {
         @media (max-width: 767.98px) {
             width:330px;
             height:330px;
+            margin-left: 16px;
         }
         @media (max-width: 450px) {
             width: 75%;
@@ -2039,7 +2040,7 @@ button.NormalButton {
         z-index: 1;
         top: 16px;
         @media (max-width: 767.98px) {
-            width: 75%;
+            width: 77%;
             padding-bottom: 75%;
             margin-left: 16px;
         }

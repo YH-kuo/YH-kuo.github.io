@@ -14184,6 +14184,7 @@ button.NormalButton {
   .finished span {
     width: 330px;
     height: 330px;
+    margin-left: 16px;
   }
 }
 
@@ -14209,7 +14210,7 @@ button.NormalButton {
 
 @media (max-width: 767.98px) {
   .finished::after {
-    width: 75%;
+    width: 77%;
     padding-bottom: 75%;
     margin-left: 16px;
   }
