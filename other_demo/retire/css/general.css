@@ -14153,6 +14153,10 @@ button.NormalButton {
   display: inline-block;
 }
 
+.query_winners span a {
+  color: #212529;
+}
+
 .finished {
   position: relative;
 }

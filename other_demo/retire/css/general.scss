@@ -1998,6 +1998,9 @@ button.NormalButton {
 .query_winners{
     span{
         display: inline-block;
+        a{
+            color: #212529;
+        }
     }
 }
 .finished{
