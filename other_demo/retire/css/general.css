@@ -14173,7 +14173,6 @@ button.NormalButton {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
   margin: 16px;
   color: #fff;
   font-weight: bold;
@@ -14193,6 +14192,39 @@ button.NormalButton {
     width: 75%;
     height: 90%;
     font-size: 18px;
+  }
+}
+
+.finished::after {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+  top: 16px;
+}
+
+@media (max-width: 767.98px) {
+  .finished::after {
+    width: 75%;
+    padding-bottom: 75%;
+  }
+}
+
+@media (max-width: 450px) {
+  .finished::after {
+    width: 75%;
+    height: 90%;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #HomeSection-3 .HomeSectionContent img {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=general.css.map */
