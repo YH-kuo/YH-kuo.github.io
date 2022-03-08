@@ -14191,8 +14191,8 @@ button.NormalButton {
 
 @media (max-width: 450px) {
   .finished span {
-    width: 75vw;
-    height: 75vw;
+    width: 75%;
+    height: 90%;
     font-size: 18px;
   }
 }
