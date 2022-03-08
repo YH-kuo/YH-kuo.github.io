@@ -14154,7 +14154,7 @@ button.NormalButton {
 }
 
 .query_winners span a {
-  color: #212529;
+  font-weight: bold;
 }
 
 .finished {

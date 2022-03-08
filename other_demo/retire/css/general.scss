@@ -1999,7 +1999,8 @@ button.NormalButton {
     span{
         display: inline-block;
         a{
-            color: #212529;
+            // color: #212529;
+            font-weight: bold;
         }
     }
 }
